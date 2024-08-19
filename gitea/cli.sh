@@ -10,7 +10,7 @@ cmd_clone_gitea_helm_chart(){
 }
 
 cmd_helm_install_gitea(){
-    # default namespace
-    cp values $repoName/values.yaml
-    helm install gitea-one ./$repoName
+    # replace helm values
+    cp values.yaml $repoName/values.yaml
+    helm install gitea-one ./$repoName # default namespace
 }
